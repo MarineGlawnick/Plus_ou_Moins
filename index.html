@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <h1> Devinez un chiffre entre 1 et 100 </h1>
-<form>
-    <label for="guessField"> Entrez une réponse</label>
-    <input type="text" name="number" id="guessField" required>
-    <button id="guessSubmit">soumettre</button>
-</form>
+<label for="input"> Entrez une réponse</label>
+<input id="input" name="number" required type="number">
+<button id="submitNumb" onclick="guessNumber()">Soumettre</button>
 
 <p id="answer"></p>
+
+<button onclick="reset()"> Rejouer</button>
 
 </body>
 <script src="app.js"></script>

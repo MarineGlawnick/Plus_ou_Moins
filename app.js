@@ -1,15 +1,20 @@
 var randomNumb = Math.floor(Math.random() * 100) + 1;
 console.log(randomNumb);
+var input = document.getElementById('input');
 function guessNumber() {
-    var guess = +guessField.value;
-    console.log(guess);
+    var guess = parseInt(input.value);
+    console.log(typeof guess);
     if (guess === randomNumb) {
         answer.textContent = 'bien joué';
-        console.log('bien joué');
     }
-    else {
-        answer.textContent = "à vous de jouer";
-        console.log('à vous de jouer');
+    else if (guess < randomNumb) {
+        answer.textContent = "plus haut";
+    }
+    else if (guess > randomNumb) {
+        answer.textContent = "plus bas";
     }
 }
-guessSubmit.addEventListener('click', guessNumber());
+submitNumb.addEventListener('click', guessNumber());
+function reset() {
+    window.location.reload();
+}
