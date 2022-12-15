@@ -7,11 +7,13 @@
 </head>
 
 <body>
-<h1> Devinez un chiffre entre 1 et 10</h1>
+<h1> Devinez un chiffre entre 1 et 100 </h1>
 <form>
-    <input type="text" name="number" id="number" required>
+    <label for="guessField"> Entrez une réponse</label>
+    <input type="text" name="number" id="guessField" required>
+    <input type="submit" value="soumettre" id="guessSubmit">
 </form>
-
+<p id="demo"> </p>
 </body>
 <script src="app.js"></script>
 </html>
