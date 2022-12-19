@@ -7,15 +7,17 @@
 </head>
 
 <body>
+<p class="tries" id="tries"></p>
+
+<div class="game">
 <h1> Devinez un chiffre entre 1 et 100 </h1>
-<label for="input"> Entrez une réponse</label>
+<label for="input">Entrez une réponse</label>
 <input id="input" name="number" required type="number">
 <button id="submitNumb" onclick="guessNumber()">Soumettre</button>
-
 <p id="answer"></p>
 
 <button onclick="reset()"> Rejouer</button>
-
+</div>
 </body>
 <script src="app.js"></script>
 </html>
